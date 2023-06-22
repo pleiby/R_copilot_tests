@@ -17,12 +17,6 @@ output:
 ### Initial Experiments with Copilot for R In VSCode
 
 ```{r}
-x <- rnorm(n = 10, mean = 1, sd = 1)
-
-x
-```
-
-```{r}
 # Generate 200 samples from normal distribution N(10, 5)
 # and plot a histogram of the samples
 x <- rnorm(n = 200, mean = 10, sd = 5)
@@ -78,8 +72,6 @@ CalculateWeeksBetweenTheDates("1955-08-12", "2023-06-21")
 > If alternative suggestions are available,
 you can see these alternatives by pressing Alt+. (or Alt+,).
 
-```{r}
-```
 
 #### Generating code suggestions from comments
 
