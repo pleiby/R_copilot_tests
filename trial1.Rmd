@@ -1,3 +1,21 @@
+---
+title: "Copilot Trial 1"
+output: 
+  html_document:
+    code_folding: show
+    theme:
+      bg: "#202123"
+      fg: "#B8BCC2"
+      primary: "#EA80FC"
+      secondary: "#00DAC6"
+      base_font:
+        google: Prompt
+      heading_font:
+        google: Proza Libre
+---
+
+### Initial Experiments with Copilot for R In VSCode
+
 ```{r}
 x <- rnorm(n = 10, mean = 1, sd = 1)
 
@@ -7,8 +25,63 @@ x
 ```{r}
 # Generate 200 samples from normal distribution N(10, 5)
 # and plot a histogram of the samples
+x <- rnorm(n = 200, mean = 10, sd = 5)
+hist(x, col = "blue", main = "Histogram of x", xlab = "x values")
 ```
+
 
 ```{r}
 # get the life expectancy and gdp data from gapminder
+library(gapminder)
+gapminder <- gapminder
 ```
+
+```{r}
+# summarize the data in gapminder
+summary(gapminder)
+```
+
+First Suggestion/Response from Copilot (to initiating a function def with its name)
+
+```{r}
+CalculateDaysBetweenTheDates <- function(date1, date2) {
+  # calculate the number of days between two dates
+  # date1 and date2 are character strings in the format "YYYY-MM-DD"
+  # returns the number of days between the two dates
+  date1 <- as.Date(date1)
+  date2 <- as.Date(date2)
+  return(as.numeric(date2 - date1))
+}
+```
+
+```{r}
+CalculateDaysBetweenTheDates("1955-08-12", "2023-06-21")
+```
+
+```{r}
+CalculateWeeksBetweenTheDates <- function(date1, date2) {
+  # calculate the number of weeks between two dates
+  # date1 and date2 are character strings in the format "YYYY-MM-DD"
+  # returns the number of weeks between the two dates
+  date1 <- as.Date(date1)
+  date2 <- as.Date(date2)
+  return(as.numeric(date2 - date1) / 7)
+}
+```
+
+```{r}
+CalculateWeeksBetweenTheDates("1955-08-12", "2023-06-21")
+```
+
+#### Seeing Alternative Suggestions
+
+> If alternative suggestions are available,
+you can see these alternatives by pressing Alt+. (or Alt+,).
+
+```{r}
+```
+
+#### Generating code suggestions from comments
+
+> You can describe something you want to do using natural language within a comment, 
+and GitHub Copilot will suggest the code to accomplish your goal.
