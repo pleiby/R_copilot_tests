@@ -1,0 +1,10 @@
+```{r}
+x <- rnorm(n = 10, mean = 1, sd = 1)
+
+x
+```
+
+```{r}
+# Generate 200 samples from normal distribution N(10, 5)
+# and plot a histogram of the samples
+```
