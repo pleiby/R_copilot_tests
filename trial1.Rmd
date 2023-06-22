@@ -8,3 +8,7 @@ x
 # Generate 200 samples from normal distribution N(10, 5)
 # and plot a histogram of the samples
 ```
+
+```{r}
+# get the life expectancy and gdp data from gapminder
+```
